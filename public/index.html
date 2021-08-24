@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>vitjun</title>
+
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css from https://materializecss.com/-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection"/>
+    <!--My CSS file: (below the 'materialize.css' so i can override it)-->
+    <link rel="stylesheet" href="css/app.css">
+
+    <!-- FIREBASE: -->
+    <!-- Update the version number as needed -->
+    <script defer src="/__/firebase/8.10.0/firebase-app.js"></script>
+    <!--include only the Firebase features as you need -->
+    <!--<script defer src="/__/firebase/8.10.0/firebase-auth.js"></script>-->
+    <!--<script defer src="/__/firebase/8.10.0/firebase-database.js"></script>-->
+    <!--<script defer src="/__/firebase/8.10.0/firebase-firestore.js"></script>-->
+    <!--<script defer src="/__/firebase/8.10.0/firebase-functions.js"></script>-->
+    <!--<script defer src="/__/firebase/8.10.0/firebase-messaging.js"></script>-->
+    <!--<script defer src="/__/firebase/8.10.0/firebase-storage.js"></script>-->
+    <!--<script defer src="/__/firebase/8.10.0/firebase-analytics.js"></script>-->
+    <!--<script defer src="/__/firebase/8.10.0/firebase-remote-config.js"></script>-->
+    <!--<script defer src="/__/firebase/8.10.0/firebase-performance.js"></script>-->
+    <!-- 
+      initialize the SDK after all desired features are loaded, set useEmulator to false
+      to avoid connecting the SDK to running emulators.
+    -->
+    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+    <!-- https://vitjun-a01b8.web.app -->
+  </head>
+  <body>
+
+    <!--Dummy-tag just a position/target for the scrollspy:-->
+    <div id="id_vitjun" class="section scrollspy"></div>
+
+    <!--The 'vitjun-logo' in the header:-->
+    <div id="id_sticky-container">
+      <div id="id_vitjun_logo_3" data-width="57" data-height="25" data-ratio="0.439"></div>
+    </div>
+
+    <!--The 'northern-sea-line' in the header:-->
+    <div id="id_nordurstrond" data-width="111" data-height="59" data-ratio="0.532"></div>
+
+    <!--The main-body of the page: (a css-grid_1 of three items: main, scrollspy and footer)-->
+    <div id="id_skeleton">
+      <div id="id_skeleton-scrollspy"><!--css-grid_1-->
+
+        <!--Navbar / Scrollspy: from 'https://materializecss.com/scrollspy.html'-->
+        <div id="id_scrollspy-container" class="hide-on-small-only">
+          <div id="id_scrollspy-bg">
+            <ul class="section table-of-contents c_scrollspy">
+              <li><a class="waves-effect" href="#id_vitjun">Vitjun</a></li>
+              <li><a class="waves-effect" href="#id_set1-title1">Mannauður</a></li>
+              <li><a class="waves-effect" href="#id_set1-section1">Almenn ráðgjöf</a></li>
+              <li><a class="waves-effect" href="#id_set1-section2">Laun og fríðindi</a></li>
+
+              <li><a class="waves-effect" href="#id_skeleton-footer">Hafðu Samband</a></li>
+            </ul>
+          </div>
+        </div>
+        <!--Navbar / Sidenav: from 'https://materializecss.com/sidenav.html'-->
+        <div id="id_sidenav-trigger" class="hide-on-med-and-up">
+          <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        </div>
+        <ul id="slide-out" class="c_font-syncopate sidenav">
+          <li>
+            <div class="user-view">
+              <a class="waves-effect sidenav-close" href="#id_vitjun">
+                <img src="css/vitjun_logo_3.svg" alt="vitjun ehf">
+              </a>
+            </div>
+          </li>
+          <li><div class="divider"></div></li>
+          <li><a class="waves-effect sidenav-close" href="#id_set1-title1">Mannauður</a></li>
+          <li><a class="waves-effect sidenav-close" href="#id_set1-section1"><i class="material-icons">keyboard_arrow_right</i>Almenn ráðgjöf</a></li>
+          <li><a class="waves-effect sidenav-close" href="#id_set1-section2"><i class="material-icons">keyboard_arrow_right</i>Laun og fríðindi</a></li>
+
+          <li><div class="divider"></div></li>
+          <li><a class="waves-effect sidenav-close" href="#id_skeleton-footer">Hafðu Samband</a></li>
+        </ul>
+
+      </div>
+      <div id="id_skeleton-main"><!--css-grid_1-->
+
+
+        <!--Collapsible: 'https://materializecss.com/collapsible.html'-->
+        <div id="id_main" class="container"><!--css-grid_2-->
+
+          <h2 id="id_set1-title1" class="c_font-syncopate section scrollspy">Mannauður</h2><!--css-grid_2-->
+          <img id="id_set1-img" src="css/folk.svg" alt="Abstrakt mynd af fólki."><!--css-grid_2-->
+
+
+          <blockquote id="id_set1-section1" class="section scrollspy"><!--css-grid_2-->
+            <h3 class="c_font-syncopate">Almenn ráðgjöf</h3>
+            <ul class="collapsible popout" data-collapsible="accordion">
+              <li>
+                  <div class="collapsible-header"><i class="material-icons">keyboard_arrow_down</i>
+                    360° mat</div>
+                  <div class="collapsible-body"><p>
+                    This is first section.</p></div>
+              </li>
+              <li>
+                <div class="collapsible-header"><i class="material-icons">keyboard_arrow_down</i>
+                  Starfsmannavelta</div>
+                <div class="collapsible-body"><p>
+                  This is second section.</p></div>
+              </li>
+              <li>
+                  <div class="collapsible-header"><i class="material-icons">keyboard_arrow_down</i>
+                    Vinnustaðamenning</div>
+                  <div class="collapsible-body"><p>
+                    This is third section.</p></div>
+              </li>
+              <li>
+                  <div class="collapsible-header"><i class="material-icons">keyboard_arrow_down</i>
+                    Fjölmenning vinnustaða og kynslóðabil</div>
+                  <div class="collapsible-body"><p>
+                    This is forth section.</p></div>
+              </li>
+            </ul>
+            <p class="c_epilogue">Smá texti um almenna mannauðsráðgjöf, bara svona til að hafa eithvað loka orð. bara svona til að hafa eithvað loka orð. :)</p>
+          </blockquote>
+          
+
+          <blockquote id="id_set1-section2" class="section scrollspy"><!--css-grid_2-->
+            <h3 class="c_font-syncopate">Laun og fríðindi</h3>
+            <ul class="collapsible popout" data-collapsible="accordion">
+              <li>
+                  <div class="collapsible-header"><i class="material-icons">keyboard_arrow_down</i>
+                    Launagreiningar</div>
+                  <div class="collapsible-body"><p>
+                    Til þess að hægt sé að útrýma óútskýrðum launamun á milli hópa er mikilvægt að framkvæma reglulegar launagreiningar. Að auki geta stjórnendur fengið upplýsingar er varða rekstur fyrirtækja og stofnana út úr greiningunni. Tvær greiningar eru í boði, þ.e. Macro-greining sem nær yfir allan hópinn og gefur heildstæða mynd af launamun vinnustaðarins og Micro-greining nær til smærri hópa innan starfsmannahópsins og gagnast vel til samræminga launa á milli þeirra sem sinna svipuðum störfum. Jafnlaunastaðall ÍST 85:2012 gerir í dag kröfu um reglulegar launagreiningar.</p></div>
+              </li>
+              <li>
+                <div class="collapsible-header"><i class="material-icons">keyboard_arrow_down</i>
+                  Launaröðun</div>
+                <div class="collapsible-body"><p>
+                  Það er mikilvægt að vanda til verka þegar launaraða á starfsmönnum, það skal gera skv. viðkomandi kjarasamningi, starfslýsingu og skv. verklagi opinbera markaðarins þegar það á við. Einnig er mikilvægt að endurskoða launaröðun reglulega, þar sem störf taka oft breytingum með tímanum sem getur haft áhrif á launaröðun. Þetta er tímafrekt og því fellur þetta oft á milli hluta hjá fyrirtækjum og stofnunum sem skapar langvarandi óánægju meðal starfsmanna sem hafa það á tilfinningunni að þeir séu ekki metnir að verðleikum. Því er mikilvægt að halda þétt utan um starfsmenn, starfslýsingar þeirra og launaröðun.</p></div>
+              </li>
+              <li>
+                  <div class="collapsible-header"><i class="material-icons">keyboard_arrow_down</i>
+                    Túlkun kjarasamninga</div>
+                  <div class="collapsible-body"><p>
+                    Í kjarasamningum má finna allar helstu upplýsingar er varða réttindi og skyldur starfsmanna en auk þess launatöflur og upplýsingar um launaröðun. Þekking á kjarasamningum er því grundvöllur fyrir góðri starfsmannastjórnun en þar sem kjarasamningar eru fremur þungir í lestri og tímafrekir yfirferðar gætir þekkingarleysis á meðal fyrirtækja og stofnana. Það getur fljótt orðið kostnaðarsamt.</p></div>
+              </li>
+              <li>
+                  <div class="collapsible-header"><i class="material-icons">keyboard_arrow_down</i>
+                    Fríðindi vinnustaða</div>
+                  <div class="collapsible-body"><p>
+                    Starfsmenn fyrirtækja og stofnana eru mikilvægasta auðlind þess og því er gríðarlega mikilvægt að vinnustaðir hafi aðdráttarafl og takmarki þannig kostnaðarsama starfsmannaveltu. Laun eru einn mikilvægasti þátturinn í þessu en fæstir vinnustaðir eru í stakk búnir til þess að hækka laun langt framyfir kjarasamningsbundna upphæð. Sé starfsmannavelta vandamál eða óánægja með laun á meðal starfsmannahópsins er mikilvægt að leita leiða til þess að laga ástandið. Fríðindi umfram kjarasamningsbundinn rétt hafa gríðarlega jákvæð áhrif á upplifun starfsmanna og hægt er að sérsníða fríðindi vinnustaða að stærð og fjárhag þeirra.</p></div>
+              </li>
+            </ul>
+            <p class="c_epilogue">Smá texti um almenna mannauðsráðgjöf, bara svona til að hafa eithvað loka orð. bara svona til að hafa eithvað loka orð. :)</p>
+          </blockquote>
+
+
+        </div>
+
+
+      </div>
+      <div id="id_skeleton-footer" class="section scrollspy"><!--css-grid_1-->
+
+        <!--Footer: from 'https://materializecss.com/footer.html'-->
+        <footer class="page-footer">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="white-text">Footer Content</h5>
+                <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Links</h5>
+                <ul>
+                  <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+              vitjun.is © 2021-2021. Allur réttur áskilinn.
+            <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+            </div>
+          </div>
+        </footer>
+
+      </div>
+    </div><!--id_skeleton-->
+
+    
+
+
+
+    
+      
+    <!--JavaScript at end of body for optimized loading-->
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <!--My JavaScript files:-->
+    <script type="module" src="js/app.js"></script>
+
+  </body>
+</html>
