@@ -203,10 +203,6 @@
 /*** Collapsible: ***/
 #id_set1-title1{
     grid-area: a_set1-title1;
-    font-size: 7vw;
-    text-align: center;
-    margin: auto;
-    padding-top: 5rem;
 }
 #id_set1-img{
     grid-area: a_set1-img;
@@ -216,13 +212,44 @@
 }
 #id_set1-section1{
     grid-area: a_set1-section1;
-    border-top: 5px solid;
-    border-image: linear-gradient(135deg, var(--my-color-light-green), 25%, transparent) 1;
 }
 #id_set1-section2{
     grid-area: a_set1-section2;
-    border-top: 5px solid;
-    border-image: linear-gradient(135deg, var(--my-color-light-green), 25%, transparent) 1;
+}
+#id_set1-section3{
+    grid-area: a_set1-section3;
+}
+
+#id_set2-title1{
+    grid-area: a_set2-title1;
+}
+#id_set2-img{
+    grid-area: a_set2-img;
+    width: 100%;
+    height: 100%;
+    padding: 2.5rem;
+}
+#id_set2-section1{
+    grid-area: a_set2-section1;
+}
+#id_set2-section2{
+    grid-area: a_set2-section2;
+}
+#id_set2-section3{
+    grid-area: a_set2-section3;
+}
+
+#id_set3-title1{
+    grid-area: a_set3-title1;
+}
+#id_set3-img{
+    grid-area: a_set3-img;
+    width: 100%;
+    height: 100%;
+    padding: 2.5rem;
+}
+#id_set3-section1{
+    grid-area: a_set3-section1;
 }
 
 #id_main{
@@ -230,14 +257,34 @@
     padding: 10rem 2rem;
     /* grid: */
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 3fr 1fr;
     /*grid-auto-rows: minmax(10px, auto);*/ /* just so we can see the rows.*/
     grid-auto-rows: minmax(min-content, max-content);
     /* areas: */
     grid-template-areas:
-        "a_set1-title1    a_set1-title1    a_set1-title1    a_set1-title1    a_set1-title1    a_set1-title1    a_set1-title1"
-        "a_set1-img       a_set1-img       a_set1-section1  a_set1-section1  a_set1-section1  a_set1-section1  ."
-        "a_set1-img       a_set1-img       .                a_set1-section2  a_set1-section2  a_set1-section2  a_set1-section2";
+        "a_set1-title1    a_set1-title1    a_set1-title1    a_set1-title1      a_set1-title1"
+        "a_set1-img       a_set1-img       a_set1-section1  a_set1-section1    ."
+        "a_set1-img       a_set1-img       .                a_set1-section2    a_set1-section2"
+        "a_set1-img       a_set1-img       a_set1-section3  a_set1-section3    ."
+
+        "a_set2-title1    a_set2-title1    a_set2-title1    a_set2-title1      a_set2-title1"
+        "a_set2-img       a_set2-img       a_set2-section1  a_set2-section1    ."
+        "a_set2-img       a_set2-img       .                a_set2-section2    a_set2-section2"
+        "a_set2-img       a_set2-img       a_set2-section3  a_set2-section3    ."
+        
+        "a_set3-title1    a_set3-title1    a_set3-title1    a_set3-title1      a_set3-title1"
+        "a_set3-img       a_set3-img       a_set3-section1  a_set3-section1    .";
+}
+
+.c_set-title{
+    font-size: 7vw;
+    text-align: center;
+    margin: auto;
+    padding-top: 5rem;
+}
+.c_set-section{
+    border-top: 5px solid;
+    border-image: linear-gradient(135deg, var(--my-color-light-green), 25%, transparent) 1;
 }
 
 #id_main h3{
