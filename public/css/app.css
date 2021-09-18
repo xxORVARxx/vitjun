@@ -131,7 +131,7 @@
     top: 50%;
     transform: translateY(-50%);
     width: 100%;
-    padding: 10rem 0 10rem 0;
+    padding: 5rem 0 5rem 0;
     /* blur-filter: */
     -webkit-backdrop-filter: blur(0.75rem);
     backdrop-filter: blur(0.75rem);
@@ -275,6 +275,34 @@
         "a_set3-title1    a_set3-title1    a_set3-title1    a_set3-title1      a_set3-title1"
         "a_set3-img       a_set3-img       a_set3-section1  a_set3-section1    .";
 }
+/**** Responsive main: ****/
+/* materializecss: s=0px-600px, m=601px-992px, l=993px-1200px and xl=1201 & above. */
+@media screen and (max-width: 600px){
+    /* this is only for 600px and less.*/
+    #id_main{
+        grid-template-columns: 5fr 1fr;
+        /* areas: */
+        grid-template-areas:
+            "a_set1-title1    a_set1-img"
+            "a_set1-section1  a_set1-section1"
+            "a_set1-section2  a_set1-section2"
+            "a_set1-section3  a_set1-section3"
+
+            "a_set2-title1    a_set2-img"
+            "a_set2-section1  a_set2-section1"
+            "a_set2-section2  a_set2-section2"
+            "a_set2-section3  a_set2-section3"
+
+            "a_set3-title1    a_set3-img"
+            "a_set3-section1  a_set3-section1";
+    }
+    #id_set1-img{
+        padding: 3vw 0 0 0;
+    }
+    #id_set2-img{
+        padding: 5vw 0 0 0;
+    }
+}/*@medie*/
 
 .c_set-title{
     font-size: 7vw;
