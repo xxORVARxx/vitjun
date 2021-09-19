@@ -82,7 +82,7 @@
 }
 
 #id_skeleton{
-    background-image: linear-gradient(to bottom, var(--my-color-light-green), white );
+    background-image: linear-gradient(to bottom, var(--my-color-light-green), 20%, white );
     position: absolute;
     top: var(--my-skeleton-pos-y);
     width: 100%;
@@ -141,10 +141,6 @@
     box-shadow: 0 5px 5px 0 rgb(0 0 0 / 16%), 0 5px 10px 0 rgb(0 0 0 / 12%);
     /* box-shadow on only one sid: */
     clip-path: inset(0px 0px 0px -15px);
-    /*NOT IN USE*//* SVG-area: *//*
-    -webkit-clip-path: polygon( 10rem 0%, 0% 10rem, 0% calc(100% - 10rem), 10rem 100%, 100% 100%, 100% 0% );
-    clip-path: polygon( 10rem 0%, 0% 10rem, 0% calc(100% - 10rem), 10rem 100%, 100% 100%, 100% 0% );
-    */
 }
 /* overriding materialize.css: */
 #id_scrollspy-container ul li{
@@ -164,10 +160,21 @@
 .table-of-contents a.active {
     border-left: 4px solid var(--my-color-green);
 }
+/**** Responsive Scrollspy: ****/
+@media screen and (max-height: 450px){
+    /* this is only for 450px and less.*/
+    #id_scrollspy-container ul li{
+        font-size: 2.66vh;
+        padding: 2.22vh;
+    }
+    #id_scrollspy-container .c_divider{
+        display: none;
+    }
+}/*@medie*/
 
 
 
-/*** Sidenav: ***/
+/*** Sidenav: (phones) ***/
 #id_sidenav-trigger{
     position: fixed;
     top: 1rem;
@@ -335,6 +342,7 @@
     font-size: 2.0rem;
 }
 .collapsible-body {
+    background-color: rgba(255, 255, 255, 0.5);
     border-bottom: 1px solid rgba(40, 40, 40, 0.25);
 }
 blockquote {
@@ -358,7 +366,7 @@ blockquote {
 }
 #id_footer-bottom{
     grid-area: a_footer-bottom;
-    background-color: var(--my-color-dark-green);
+    background-color: var(--my-color-light-green);
 }
 #id_footer-bottom .c_th_left{
     text-align: right;
