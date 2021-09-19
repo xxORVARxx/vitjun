@@ -354,9 +354,17 @@ blockquote {
 /*** Footer: ***/
 #id_footer-area1{
     grid-area: a_footer-area1;
+    background-image: url(simi.svg);
+    background-repeat: no-repeat;
+    background-size: 60%;
+    background-position: 100% 60%;
 }
 #id_footer-area2{
     grid-area: a_footer-area2;
+    background-image: url(stadsetning.svg);
+    background-repeat: no-repeat;
+    background-size: 75%;
+    background-position: 100% 60%;
 }
 #id_footer-area3{
     grid-area: a_footer-area3;
@@ -373,6 +381,10 @@ blockquote {
 }
 
 #id_footer {
+    background-image: url(logo.svg);
+    background-repeat: no-repeat;
+    background-size: auto 40%;
+    background-position: top 40% right calc((( 100vw - var(--my-skeleton-scrollspy-width)) / 3 ) / 1.75);
     width: 100%;
     color: #ffffff;
     padding: 1rem 0 0 0;
@@ -399,10 +411,20 @@ blockquote {
             "a_footer-spacer  a_footer-area3 ."
             "a_footer-bottom  a_footer-bottom a_footer-bottom";
     }
+    #id_footer {
+        background-image: none;
+    }
+    #id_footer-area3{
+        background-image: url(logo.svg);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: 50% 60%;
+    }
 }/*@medie*/
 
 #id_footer div{
-    margin: 1rem;
+    padding: 1rem 2vw 1rem 0.2rem;
+    margin: 0 auto;
 }
 #id_footer h4{
     font-size: 1.2rem;
