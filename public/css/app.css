@@ -38,7 +38,6 @@
 
 
 
-
 /**** SVGs: ****/
 #id_sticky-container{
     position: absolute;
@@ -97,7 +96,6 @@
         "a_skeleton-main    a_skeleton-scrollspy"
         "a_skeleton-footer  a_skeleton-footer";
 }
-
 /**** Responsive Skeleton: ****/
 /* materializecss: s=0px-600px, m=601px-992px, l=993px-1200px and xl=1201 & above. */
 @media screen and (max-width: 600px){
@@ -251,7 +249,7 @@
 }
 
 .c_set-title{
-    font-size: calc(( 100vw - var(--my-skeleton-scrollspy-width)) * 0.08);
+    font-size: min(16.5rem, calc(( 100vw - var(--my-skeleton-scrollspy-width)) * 0.08));
     padding-top: 5rem;
 }
 .c_img-container{
@@ -268,6 +266,33 @@
 .c_set-section{
     border-top: 5px solid;
     border-image: linear-gradient(135deg, var(--my-color-light-green), 25%, transparent) 1;
+}
+
+#id_main h3{
+    padding: 0rem  2.25rem 0rem  2.25rem;
+}
+#id_main .c_epilogue{
+    padding: 0rem  2.25rem 0rem  2.25rem;
+    margin-bottom: 0;
+}
+
+/* overriding materialize.css: */
+.collapsible-header {
+    background-color: rgba(255, 255, 255, 0.7);
+    border-bottom: 1px solid rgba(40, 40, 40, 0.25);
+}
+.collapsible.popout>li {
+    font-size: 1.33rem;
+}
+.collapsible-header i {
+    font-size: 2.0rem;
+}
+.collapsible-body {
+    background-color: rgba(255, 255, 255, 0.7);
+    border-bottom: 1px solid rgba(40, 40, 40, 0.25);
+}
+blockquote {
+    border-left: 5px solid var(--my-color-light-green);
 }
 
 #id_main{
@@ -322,33 +347,6 @@
         padding: 5rem 0 0 0;
     }
 }/*@medie*/
-
-#id_main h3{
-    padding: 0rem  2.25rem 0rem  2.25rem;
-}
-#id_main .c_epilogue{
-    padding: 0rem  2.25rem 0rem  2.25rem;
-    margin-bottom: 0;
-}
-
-/* overriding materialize.css: */
-.collapsible-header {
-    background-color: rgba(255, 255, 255, 0.5);
-    border-bottom: 1px solid rgba(40, 40, 40, 0.25);
-}
-.collapsible.popout>li {
-    font-size: 1.33rem;
-}
-.collapsible-header i {
-    font-size: 2.0rem;
-}
-.collapsible-body {
-    background-color: rgba(255, 255, 255, 0.5);
-    border-bottom: 1px solid rgba(40, 40, 40, 0.25);
-}
-blockquote {
-    border-left: 5px solid var(--my-color-light-green);
-}
 
 
 
@@ -451,13 +449,17 @@ blockquote {
 
 
 
-
 /*** Text & Font: ***/
 .c_font-syncopate{
     font-family: syncopate;
 }
 h3{
     font-size: 1.75rem;
+}
+h4{
+    font-size: 1.3rem;
+    margin: 0;
+    line-height: 1.7;
 }
 p{
     font-size: 1.25rem;
