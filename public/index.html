@@ -42,77 +42,21 @@
   </head>
   <body>
 
-    <!--Dummy-tag just a position/target for the scrollspy:-->
-    <div id="id_vitjun" class="section scrollspy"></div>
-
+    <!---SVGs in Header (SVGs are outside the 'wrapper' for the purpose of going behind it):-->
     <!--The 'vitjun-logo' in the header:-->
     <div id="id_sticky-container">
       <div id="id_vitjun_logo_3" data-width="57" data-height="25" data-ratio="0.439"></div>
     </div>
-
     <!--The 'northern-sea-line' in the header:-->
     <div id="id_nordurstrond" data-width="111" data-height="59" data-ratio="0.532"></div>
+    
 
-    <!--The main-body of the page: (a css-grid_1 of three items: main, scrollspy and footer)-->
-    <div id="id_skeleton">
-      <div id="id_skeleton-scrollspy"><!--css-grid_1-->
 
-        <!--Navbar / Scrollspy: from 'https://materializecss.com/scrollspy.html'-->
-        <div id="id_scrollspy-container" class="hide-on-small-only">
-          <div id="id_scrollspy-bg">
-            <ul class="section table-of-contents c_scrollspy">
-              <li><a class="waves-effect" href="#id_vitjun">Vitjun</a></li>
-              <li class="c_divider"><div class="divider"></div></li>
+    <div id="id_wrapper">
+      <!--Header / SVGs:-->
+      <header id="id_vitjun" class="section scrollspy"></header>
 
-              <li><a class="waves-effect" href="#id_set1-title1">Mannauður</a></li>
-              <li><a class="waves-effect" href="#id_set1-section1"><i class="material-icons tiny">keyboard_arrow_right</i>Almenn ráðgjöf</a></li>
-              <li><a class="waves-effect" href="#id_set1-section2"><i class="material-icons tiny">keyboard_arrow_right</i>Laun og fríðindi</a></li>
-              <li><a class="waves-effect" href="#id_set1-section3"><i class="material-icons tiny">keyboard_arrow_right</i>líðan og áreiti</a></li>
-
-              <li><a class="waves-effect" href="#id_set2-title1">Gæðakerfi</a></li>
-              <li><a class="waves-effect" href="#id_set2-section1"><i class="material-icons tiny">keyboard_arrow_right</i>JAFNLB</a></li>
-              <li><a class="waves-effect" href="#id_set2-section2"><i class="material-icons tiny">keyboard_arrow_right</i>HMS</a></li>
-              <li><a class="waves-effect" href="#id_set2-section3"><i class="material-icons tiny">keyboard_arrow_right</i>UMVERFIS</a></li>
-
-              <li><a class="waves-effect" href="#id_set3-title1">Fyrirlestrar</a></li>
-
-              <li class="c_divider"><div class="divider"></div></li>
-              <li><a class="waves-effect" href="#id_skeleton-footer">Hafðu Samband</a></li>
-            </ul>
-          </div>
-        </div>
-        <!--Navbar / Sidenav: from 'https://materializecss.com/sidenav.html'-->
-        <div id="id_sidenav-trigger" class="hide-on-med-and-up">
-          <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-        </div>
-        <ul id="slide-out" class="c_font-syncopate sidenav">
-          <li>
-            <div class="user-view">
-              <a class="waves-effect sidenav-close" href="#id_vitjun">
-                <img src="css/vitjun_logo_3.svg" alt="vitjun ehf">
-              </a>
-            </div>
-          </li>
-          <li><div class="divider"></div></li>
-          <li><a class="waves-effect sidenav-close" href="#id_set1-title1">Mannauður</a></li>
-          <li><a class="waves-effect sidenav-close" href="#id_set1-section1"><i class="material-icons">keyboard_arrow_right</i>Almenn ráðgjöf</a></li>
-          <li><a class="waves-effect sidenav-close" href="#id_set1-section2"><i class="material-icons">keyboard_arrow_right</i>Laun og fríðindi</a></li>
-          <li><a class="waves-effect sidenav-close" href="#id_set1-section3"><i class="material-icons">keyboard_arrow_right</i>Andleg líðan og áreiti</a></li>
-
-          <li><a class="waves-effect sidenav-close" href="#id_set2-title1">Gæðakerfi</a></li>
-          <li><a class="waves-effect sidenav-close" href="#id_set2-section1"><i class="material-icons">keyboard_arrow_right</i>JAFNLB</a></li>
-          <li><a class="waves-effect sidenav-close" href="#id_set2-section2"><i class="material-icons">keyboard_arrow_right</i>HMS</a></li>
-          <li><a class="waves-effect sidenav-close" href="#id_set2-section3"><i class="material-icons">keyboard_arrow_right</i>UMVERFIS</a></li>
-
-          <li><a class="waves-effect sidenav-close" href="#id_set3-title1">Fyrirlestrar</a></li>
-
-          <li><div class="divider"></div></li>
-          <li><a class="waves-effect sidenav-close" href="#id_skeleton-footer">Hafðu Samband</a></li>
-        </ul>
-
-      </div>
-      <div id="id_skeleton-main"><!--css-grid_1-->
-
+      <main>
 
         <!--Collapsible: 'https://materializecss.com/collapsible.html'-->
         <div id="id_main" class="container"><!--css-grid_2-->
@@ -280,53 +224,105 @@
             <p class="c_epilogue">Vitjun býður upp á fjölbreytta fyrirlestra fyrir starfsmannahópinn, hvort sem um ræðir stjórnendur, almenna starfsmenn eða bæði. Hægt er að senda inn beiðni um fræðslu á ákveðnum málefnum eða biðja Vitjun um að gera sér tilboð. Fyrirlestrarnir eru skemmtilegt uppbrot í vinnudaginn, þeir hafa fræðslugildi sem nýtast hverjum og einum sem og vinnustaðnum.</p>
           </blockquote>
 
+        </div><!--id_main-->
+      </main>
 
+
+
+      <div id="id_footer" class="section scrollspy"><!--css-grid_3-->
+        <div id="id_footer-area1"><!--css-grid_3-->
+          <h4 class="c_font-syncopate">Hafa Samband</h4>
+          <ul>
+            <li><p>BrynjaRun@vitjun.is</p></li>
+            <li><p>Sími:  858 7512</p></li>
+            <li><p>Alla daga:</p></li>
+            <li><p>08:00 til 20:00</p></li>
+            <li>*nema á aðfangadag :)</li>
+          </ul>
+        </div>
+        <div id="id_footer-area2"><!--css-grid_3-->
+          <h4 class="c_font-syncopate">Staðsetning</h4>
+            <ul>
+              <li><p>Norðurþing</p></li>
+              <li><p>Sólbrekku 1</p></li>
+              <li><p>640 Húsavík</p></li>
+              <li><p>Ísland</p></li>
+            </ul>
+        </div>
+        <div id="id_footer-area3"><!--css-grid_3-->
+          <h4 class="c_font-syncopate">Upplýsingar</h4>
+          <ul>
+            <li><p>Vitjun ehf</p></li>
+            <li><p>Kennitala:</p></li>
+            <li><p>460821-0450</p></li>
+          </ul>
+        </div>
+        <div id="id_footer-spacer"></div><!--css-grid_3-->
+        <table id="id_footer-bottom"><!--css-grid_3-->
+          <tr>
+            <th><h4>vitjun.is © 2021-2021. Allur réttur áskilinn.</h4></th>
+            <th class="c_th_left">MadebyÖrvarSigþórsson</th>
+          </tr>
+        </table>
+      </div>
+
+
+
+      <!--Navbar / Scrollspy: from 'https://materializecss.com/scrollspy.html'-->
+      <div id="id_scrollspy-container" class="hide-on-small-only">
+        <div id="id_scrollspy-bg">
+          <ul class="section table-of-contents c_scrollspy">
+            <li><a class="waves-effect" href="#id_vitjun">Vitjun</a></li>
+            <li class="c_divider"><div class="divider"></div></li>
+
+            <li><a class="waves-effect" href="#id_set1-title1">Mannauður</a></li>
+            <li><a class="waves-effect" href="#id_set1-section1"><i class="material-icons tiny">keyboard_arrow_right</i>Almenn ráðgjöf</a></li>
+            <li><a class="waves-effect" href="#id_set1-section2"><i class="material-icons tiny">keyboard_arrow_right</i>Laun og fríðindi</a></li>
+            <li><a class="waves-effect" href="#id_set1-section3"><i class="material-icons tiny">keyboard_arrow_right</i>líðan og áreiti</a></li>
+
+            <li><a class="waves-effect" href="#id_set2-title1">Gæðakerfi</a></li>
+            <li><a class="waves-effect" href="#id_set2-section1"><i class="material-icons tiny">keyboard_arrow_right</i>JAFNLB</a></li>
+            <li><a class="waves-effect" href="#id_set2-section2"><i class="material-icons tiny">keyboard_arrow_right</i>HMS</a></li>
+            <li><a class="waves-effect" href="#id_set2-section3"><i class="material-icons tiny">keyboard_arrow_right</i>UMVERFIS</a></li>
+
+            <li><a class="waves-effect" href="#id_set3-title1">Fyrirlestrar</a></li>
+
+            <li class="c_divider"><div class="divider"></div></li>
+            <li><a class="waves-effect" href="#id_footer">Hafðu Samband</a></li>
+          </ul>
         </div>
       </div>
-      <div id="id_skeleton-footer" class="section scrollspy"><!--css-grid_1-->
-
-
-        <div id="id_footer"><!--css-grid_3-->
-          <div id="id_footer-area1"><!--css-grid_3-->
-            <h4 class="c_font-syncopate">Hafa Samband</h4>
-            <ul>
-              <li><p>BrynjaRun@vitjun.is</p></li>
-              <li><p>Sími:  858 7512</p></li>
-              <li><p>Alla daga:</p></li>
-              <li><p>08:00 til 20:00</p></li>
-              <li>*nema á aðfangadag :)</li>
-            </ul>
-          </div>
-          <div id="id_footer-area2"><!--css-grid_3-->
-            <h4 class="c_font-syncopate">Staðsetning</h4>
-              <ul>
-                <li><p>Norðurþing</p></li>
-                <li><p>Sólbrekku 1</p></li>
-                <li><p>640 Húsavík</p></li>
-                <li><p>Ísland</p></li>
-              </ul>
-          </div>
-          <div id="id_footer-area3"><!--css-grid_3-->
-            <h4 class="c_font-syncopate">Upplýsingar</h4>
-            <ul>
-              <li><p>Vitjun ehf</p></li>
-              <li><p>Kennitala:</p></li>
-              <li><p>460821-0450</p></li>
-            </ul>
-          </div>
-          <div id="id_footer-spacer"></div><!--css-grid_3-->
-          <table id="id_footer-bottom"><!--css-grid_3-->
-            <tr>
-              <th><h4>vitjun.is © 2021-2021. Allur réttur áskilinn.</h4></th>
-              <th class="c_th_left">MadebyÖrvarSigþórsson</th>
-            </tr>
-          </table>
-        </div>
-
-
+      <!--Navbar / Sidenav: from 'https://materializecss.com/sidenav.html' (phones)-->
+      <div id="id_sidenav-trigger" class="hide-on-med-and-up">
+        <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
       </div>
-    </div><!--id_skeleton-->
-      
+      <ul id="slide-out" class="c_font-syncopate sidenav">
+        <li>
+          <div class="user-view">
+            <a class="waves-effect sidenav-close" href="#id_vitjun">
+              <img src="css/vitjun_logo_3.svg" alt="vitjun ehf">
+            </a>
+          </div>
+        </li>
+        <li><div class="divider"></div></li>
+        <li><a class="waves-effect sidenav-close" href="#id_set1-title1">Mannauður</a></li>
+        <li><a class="waves-effect sidenav-close" href="#id_set1-section1"><i class="material-icons">keyboard_arrow_right</i>Almenn ráðgjöf</a></li>
+        <li><a class="waves-effect sidenav-close" href="#id_set1-section2"><i class="material-icons">keyboard_arrow_right</i>Laun og fríðindi</a></li>
+        <li><a class="waves-effect sidenav-close" href="#id_set1-section3"><i class="material-icons">keyboard_arrow_right</i>Andleg líðan og áreiti</a></li>
+
+        <li><a class="waves-effect sidenav-close" href="#id_set2-title1">Gæðakerfi</a></li>
+        <li><a class="waves-effect sidenav-close" href="#id_set2-section1"><i class="material-icons">keyboard_arrow_right</i>JAFNLB</a></li>
+        <li><a class="waves-effect sidenav-close" href="#id_set2-section2"><i class="material-icons">keyboard_arrow_right</i>HMS</a></li>
+        <li><a class="waves-effect sidenav-close" href="#id_set2-section3"><i class="material-icons">keyboard_arrow_right</i>UMVERFIS</a></li>
+
+        <li><a class="waves-effect sidenav-close" href="#id_set3-title1">Fyrirlestrar</a></li>
+
+        <li><div class="divider"></div></li>
+        <li><a class="waves-effect sidenav-close" href="#id_footer">Hafðu Samband</a></li>
+      </ul>
+
+    </div><!--id_wrapper-->
+
     <!--JavaScript at end of body for optimized loading-->
     <script type="text/javascript" src="js/materialize.min.js"></script>
     <!--My JavaScript files:-->
