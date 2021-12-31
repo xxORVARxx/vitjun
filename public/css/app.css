@@ -44,20 +44,6 @@
     min-height: 100%;
 }
 
-
-/**** Header: ****/
-header{
-    width: 10%;
-    height: var(--my-header-height);
-    padding-top: 0;
-    padding-bottom: 0;
-}
-/* overriding materialize.css: */
-header.section{
-    padding-top: 0rem;
-    padding-bottom: 0rem;
-}
-
 /*** SVGs: ***/
 #id_sticky-container{
     position: absolute;
@@ -84,6 +70,51 @@ header.section{
     width: 100%;
     height: var(--my-island-height);
 }
+
+/**** Header: ****/
+header{
+    position: relative;
+    width: calc(99% - var(--my-scrollspy-width));
+    height: var(--my-header-height);
+    padding-top: 0;
+    padding-bottom: 0;
+}
+#id_about{
+    position: absolute;
+    width: 50%;
+    top: 60%;
+    right: 0;
+    background-image: linear-gradient(170deg, white, 2%, transparent 55%);
+    border-top: 5px solid;
+    border-image: linear-gradient(135deg, var(--my-color-green), 25%, transparent) 1;
+}
+/* overriding materialize.css: */
+header.section{
+    padding-top: 0rem;
+    padding-bottom: 0rem;
+}
+/**** Responsive Header: ****/
+/* materializecss: s=0px-600px, m=601px-992px, l=993px-1200px and xl=1201 & above. */
+@media screen and (max-width: 992px){
+    /* this is only for 992px and less.*/
+    #id_about{
+        top: 80%;
+        width: 60%;
+    }
+}
+@media screen and (max-width: 600px){
+    /* this is only for 600px and less.*/
+    header{
+        width: 100%;
+    }
+    #id_about{
+        top: 100%;
+        left: 0;
+        width: auto;
+        margin: 10vw;
+        background-image: linear-gradient(135deg, white, 2%, transparent 55%);
+    }
+}/*@medie*/
 
 
 
@@ -162,7 +193,13 @@ main{
 }
 #id_main .c_epilogue{
     padding: 0rem  2.25rem 0rem  2.25rem;
-    margin-bottom: 0;
+    margin-bottom: 1rem;
+}
+.c_arrow{
+    background: black;
+    width: 1.25rem;
+    height: 1.25rem;
+    margin: 0.4rem 1rem 0rem 0.5rem;
 }
 
 /* overriding materialize.css: */
@@ -172,9 +209,6 @@ main{
 }
 .collapsible.popout>li {
     font-size: 1.33rem;
-}
-.collapsible-header i {
-    font-size: 2.0rem;
 }
 .collapsible-body {
     background-color: rgba(255, 255, 255, 0.7);
@@ -186,8 +220,10 @@ blockquote {
 
 #id_main{
     width: 100%;
-    padding: 8vw 2rem;
+    padding-top: calc( 100vh - var(--my-header-height));
+    padding-bottom: 8vw;
     padding-right: calc( 2rem + var(--my-scrollspy-width));
+    padding-left: 2rem;
     /* grid: */
     display: grid;
     grid-template-columns: 1fr 1fr 3fr 1fr;
@@ -214,6 +250,7 @@ blockquote {
     /* this is only for 600px and less.*/
     #id_main{
         padding: 8vw 2rem;
+        padding-top: calc( 99vh - var(--my-header-height));
         grid-template-columns: 5fr 1fr;
         /* areas: */
         grid-template-areas:
@@ -460,4 +497,33 @@ p{
     -webkit-backdrop-filter: blur(0.75rem);
     backdrop-filter: blur(0.75rem);
     background-color: rgba(255, 255, 255, 0.5);
+}
+
+
+
+/*** Animations: ***/
+.c_arrow{
+    animation-name: rotate-90;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: both;
+}
+li.active .c_arrow{
+    animation-name: rotate90;
+}
+@keyframes rotate90{
+    0%{ clip-path: polygon(42% 8%, 50% 0, 92% 42%, 100% 50%, 50% 100%, 42% 92%, 85% 50%, 42% 8%); }
+    40%{ clip-path: polygon(42% 8%, 50% 0, 92% 42%, 100% 50%, 50% 100%, 42% 92%, 0 50%, 42% 8%); 
+        background: var(--my-color-green); }
+    60%{ clip-path: polygon(8% 42%, 50% 0, 92% 42%, 100% 50%, 50% 100%, 42% 92%, 0 50%, 8% 42%);
+        background: var(--my-color-green); }
+    100%{ clip-path: polygon(8% 42%, 50% 85%, 92% 42%, 100% 50%, 50% 100%, 42% 92%, 0 50%, 8% 42%); }
+}
+@keyframes rotate-90{
+    0%{ clip-path: polygon(8% 42%, 50% 85%, 92% 42%, 100% 50%, 50% 100%, 42% 92%, 0 50%, 8% 42%); }    
+    40%{ clip-path: polygon(8% 42%, 50% 0, 92% 42%, 100% 50%, 50% 100%, 42% 92%, 0 50%, 8% 42%);
+        background: var(--my-color-green); }
+    60%{ clip-path: polygon(42% 8%, 50% 0, 92% 42%, 100% 50%, 50% 100%, 42% 92%, 0 50%, 42% 8%); 
+        background: var(--my-color-green); }
+    100%{ clip-path: polygon(42% 8%, 50% 0, 92% 42%, 100% 50%, 50% 100%, 42% 92%, 85% 50%, 42% 8%); }
 }
