@@ -1,0 +1,270 @@
+
+/* ==========================================================================
+Animation System by Neale Van Fleet from Rogue Amoeba
+========================================================================== */
+
+/* Initialize for Animation: */
+.as-animate{
+    animation-duration: 0.75s;
+    animation-delay: 0.5s;
+    animation-name: as-animate-fade;
+    animation-timing-function: cubic-bezier(0.26, 0.53, 0.74, 1.48);
+    animation-fill-mode: backwards;
+}
+
+/* Fade In: */
+.as-animate.fade{
+    animation-name: as-animate-fade;
+    animation-timing-function: ease;
+}
+@keyframes as-animate-fade{
+    0%{ 
+        opacity: 0; 
+    }
+    100%{ 
+        opacity: 1; 
+    }
+}
+
+/* Pop In: */
+.as-animate.pop{ 
+    animation-name: as-animate-pop; 
+}
+@keyframes as-animate-pop{
+    0%{
+        opacity: 0;
+        transform: scale(0.5, 0.5);
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1, 1);
+    }
+}
+
+/* Blur In: */
+.as-animate.blur{
+    animation-name: as-animate-blur;
+    animation-timing-function: ease;
+}
+@keyframes as-animate-blur{
+    0%{
+        opacity: 0;
+        filter: blur(15px);
+    }
+    100%{
+        opacity: 1;
+        filter: blur(0px);
+    }
+}
+
+/* Glow In: */
+.as-animate.glow{
+    animation-name: as-animate-glow;
+    animation-timing-function: ease;
+}
+@keyframes as-animate-glow{
+    0%{
+        opacity: 0;
+        filter: brightness(3) saturate(3);
+        transform: scale(0.95, 0.95);
+    }
+    100%{
+        opacity: 1;
+        filter: brightness(1) saturate(1);
+        transform: scale(1, 1);
+    }
+}
+
+/* Grow In: */
+.as-animate.grow{ 
+    animation-name: as-animate-grow; 
+}
+@keyframes as-animate-grow{
+    0%{
+        opacity: 0;
+        transform: scale(1, 0);
+        visibility: hidden;
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1, 1);
+    }
+}
+
+/* Splat In: */
+.as-animate.splat{ 
+    animation-name: as-animate-splat; 
+}
+@keyframes as-animate-splat{
+    0%{
+        opacity: 0;
+        transform: scale(0, 0) rotate(20deg) translate(0, -30px);
+        }
+    70%{
+        opacity: 1;
+        transform: scale(1.1, 1.1) rotate(15deg);
+    }
+    85%{
+        opacity: 1;
+        transform: scale(1.1, 1.1) rotate(15deg) translate(0, -10px);
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1, 1) rotate(0) translate(0, 0);
+    }
+}
+
+/* Roll In: */
+.as-animate.roll{ 
+    animation-name: as-animate-roll; 
+}
+@keyframes as-animate-roll{
+    0%{
+        opacity: 0;
+        transform: scale(0, 0) rotate(360deg);
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1, 1) rotate(0deg);
+    }
+}
+
+/* Flip In: */
+.as-animate.flip{
+    animation-name: as-animate-flip;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+@keyframes as-animate-flip{
+    0%{
+        opacity: 0;
+        transform: rotateX(-120deg) scale(0.9, 0.9);
+    }
+    100%{
+        opacity: 1;
+        transform: rotateX(0deg) scale(1, 1);
+    }
+}
+
+/* Spin In: */
+.as-animate.spin{
+    animation-name: as-animate-spin;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+@keyframes as-animate-spin{
+    0%{
+        opacity: 0;
+        transform: rotateY(-120deg) scale(0.9, .9);
+    }
+    100%{
+        opacity: 1;
+        transform: rotateY(0deg) scale(1, 1);
+    }
+}
+
+/* Slide In: */
+.as-animate.slide{ 
+    animation-name: as-animate-slide; 
+}
+@keyframes as-animate-slide{
+    0%{
+        opacity: 0;
+        transform: translate(50px, 0);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+}
+
+/* Drop In: */
+.as-animate.drop{ 
+    animation-name: as-animate-drop; 
+    animation-timing-function: cubic-bezier(0.77, 0.14, 0.91, 1.25);
+}
+@keyframes as-animate-drop{
+    0%{
+        opacity: 0;
+        transform: translate(0,-300px) scale(0.9, 1.1);
+    }
+    95%{
+        opacity: 1;
+        transform: translate(0, 0) scale(0.9, 1.1);
+    }
+    96%{
+        opacity: 1;
+        transform: translate(10px, 0) scale(1.2, 0.9);
+    }
+    97%{
+        opacity: 1;
+        transform: translate(-10px, 0) scale(1.2, 0.9);
+    }
+    98%{
+        opacity: 1;
+        transform: translate(5px, 0) scale(1.1, 0.9);
+    }
+    99%{
+        opacity: 1;
+        transform: translate(-5px, 0) scale(1.1, 0.9);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0, 0) scale(1, 1);
+    }
+}
+
+/* Animation Delays: */
+.as-delay-0{
+    animation-delay: 0s;
+}
+.as-delay-1{
+    animation-delay: 0.6s;
+}
+.as-delay-2{
+    animation-delay: 0.7s;
+}
+.as-delay-3{
+    animation-delay: 0.8s;
+}
+.as-delay-4{
+    animation-delay: 0.9s;
+}
+.as-delay-5{
+    animation-delay: 1s;
+}
+.as-delay-6{
+    animation-delay: 1.1s;
+}
+.as-delay-7{
+    animation-delay: 1.2s;
+}
+.as-delay-8{
+    animation-delay: 1.3s;
+}
+.as-delay-9{
+    animation-delay: 1.4s;
+}
+.as-delay-10{
+    animation-delay: 1.5s;
+}
+.as-delay-11{
+    animation-delay: 1.6s;
+}
+.as-delay-12{
+    animation-delay: 1.7s;
+}
+.as-delay-13{
+    animation-delay: 1.8s;
+}
+.as-delay-14{
+    animation-delay: 1.9s;
+}
+.as-delay-15{
+    animation-delay: 2s;
+}
+
+/*Remove animations for users who have enabled their reduced motion preference setting:*/
+@media screen and (prefers-reduced-motion: reduce){
+    .animate{ animation: none !important; }
+}

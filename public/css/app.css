@@ -144,6 +144,7 @@ main{
 
 #id_set2-title1{
     grid-area: a_set2-title1;
+    font-size: min(16.5rem, calc(( 100vw - var(--my-scrollspy-width)) * 0.05 ));
 }
 #id_set2-img1{
     grid-area: a_set2-img1;
@@ -154,9 +155,7 @@ main{
 #id_set2-section2{
     grid-area: a_set2-section2;
 }
-#id_set2-section3{
-    grid-area: a_set2-section3;
-}
+
 
 #id_set3-title1{
     grid-area: a_set3-title1;
@@ -166,6 +165,19 @@ main{
 }
 #id_set3-section1{
     grid-area: a_set3-section1;
+}
+#id_set3-section2{
+    grid-area: a_set3-section2;
+}
+
+#id_set4-title1{
+    grid-area: a_set4-title1;
+}
+#id_set4-img1{
+    grid-area: a_set4-img1;
+}
+#id_set4-section1{
+    grid-area: a_set4-section1;
 }
 
 .c_set-title{
@@ -217,6 +229,9 @@ main{
 blockquote {
     border-left: 5px solid var(--my-color-light-green);
 }
+.collapsible {
+    margin-top: 2.5rem;
+}
 
 #id_main{
     width: 100%;
@@ -239,10 +254,13 @@ blockquote {
         "a_set2-img1   a_set2-title1    a_set2-title1      a_set2-title1  "
         "a_set2-img1   a_set2-section1  a_set2-section1    .              "
         "a_set2-img1   .                a_set2-section2    a_set2-section2"
-        "a_set2-img1   a_set2-section3  a_set2-section3    .              "
-        
+
         "a_set3-img1   a_set3-title1    a_set3-title1      a_set3-title1  "
-        "a_set3-img1   a_set3-section1  a_set3-section1    .              ";
+        "a_set3-img1   a_set3-section1  a_set3-section1    .              "
+        "a_set3-img1   .                a_set3-section2    a_set3-section2"
+        
+        "a_set4-img1   a_set4-title1    a_set4-title1      a_set4-title1  "
+        "a_set4-img1   a_set4-section1  a_set4-section1    .              ";
 }
 /**** Responsive main: ****/
 /* materializecss: s=0px-600px, m=601px-992px, l=993px-1200px and xl=1201 & above. */
@@ -262,10 +280,16 @@ blockquote {
             "a_set2-title1    a_set2-img1"
             "a_set2-section1  a_set2-section1"
             "a_set2-section2  a_set2-section2"
-            "a_set2-section3  a_set2-section3"
 
             "a_set3-title1    a_set3-img1"
-            "a_set3-section1  a_set3-section1";
+            "a_set3-section1  a_set3-section1"
+            "a_set3-section2  a_set3-section2"
+
+            "a_set4-title1    a_set4-img1"
+            "a_set4-section1  a_set4-section1";
+    }
+    #id_set2-title1{
+        font-size: min(16.5rem, calc(( 100vw - var(--my-scrollspy-width)) * 0.08 ));
     }
     .c_set-title{
         font-size: calc( 80vw * 0.08);
