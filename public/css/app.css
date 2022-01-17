@@ -29,61 +29,50 @@
     --my-logo-height: calc( var(--my-logo-width) * 0.439); /*<- height/width ratio, see in HTML.*/
 
     --my-island-pos-y: 7.5vw;
-    --my-island-height: calc( 100vw * 0.532); /*<- height/width ratio, see in HTML.*/
+    --my-island-height: calc( 100vw * 0.5); /*<- height/width ratio, see in HTML.*/
 
-    --my-header-height: calc( var(--my-island-pos-y) + var(--my-island-height) - 1.5rem);
     --my-scrollspy-width: 20.0rem;
 }
 
 
 
-/**** Wrapper ****/
-#id_wrapper{
-    position: absolute;
-    width: 100%;
-    min-height: 100%;
-}
-
-/*** SVGs: ***/
+/*** SVG Vitjun logo: ***/
 #id_sticky-container{
     position: absolute;
     top: 0;
     left: var(--my-logo-pos-x);
     width: var(--my-logo-width);
-    height: calc(( var(--my-logo-height) * 1.2 ) + var(--my-header-height));
+    height: calc(( var(--my-logo-height) * 1.2 ) + var(--my-island-height));
 }
-#id_vitjun_logo_3{
-    background-image: url(vitjun_logo_3.svg);
-    background-repeat: no-repeat;
-    background-size: 100%;
+#id_vitjun_logo{
     position: sticky;
     top: var(--my-logo-pos-y);
-    height: var(--my-logo-height);
+}
+#id_vitjun_logo svg{
+    width: 100%;
+    height: 100%;
+}
+#id_vitjun_logo svg .c_svg-logo-art{
+    stroke: var(--my-color-green);
 }
 
-#id_nordurstrond{
+
+
+/**** Wrapper and The SVG 'northern-sea-line' in the header: ****/
+#id_wrapper{
+    position: absolute;
+    width: 100%;
+    min-height: max(100%, var(--my-island-height));
+    /* The SVG 'northern-sea-line' in the header: */
     background-image: url(nordurstrond_skuggi.svg);
     background-repeat: no-repeat;
     background-size: 100%;
-    position: absolute;
     top: var(--my-island-pos-y);
-    width: 100%;
-    height: var(--my-island-height);
 }
 
 /**** Header: ****/
-header{
-    position: relative;
-    width: calc(99% - var(--my-scrollspy-width));
-    height: var(--my-header-height);
-    padding-top: 0;
-    padding-bottom: 0;
-}
 #id_about{
-    position: absolute;
-    width: 50%;
-    top: 60%;
-    right: 0;
+    grid-area: a_header1;
     background-image: linear-gradient(170deg, white, 2%, transparent 55%);
     border-top: 5px solid;
     border-image: linear-gradient(135deg, var(--my-color-green), 25%, transparent) 1;
@@ -93,26 +82,32 @@ header.section{
     padding-top: 0rem;
     padding-bottom: 0rem;
 }
+header{
+    width: 100%;
+    min-height: calc( 90vh - var(--my-island-height));
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-right: calc( 2rem + var(--my-scrollspy-width));
+    padding-left: 2rem;
+    /* grid: */
+    display: grid;
+    grid-template-columns: 1fr 1fr 3fr 1fr;
+    /*grid-auto-rows: minmax(10px, auto);*/ /* just so we can see the rows.*/
+    grid-auto-rows: minmax(min-content, max-content);
+    /* areas: */
+    grid-template-areas:
+        ".      .      a_header1    a_header1";
+}
 /**** Responsive Header: ****/
 /* materializecss: s=0px-600px, m=601px-992px, l=993px-1200px and xl=1201 & above. */
-@media screen and (max-width: 992px){
-    /* this is only for 992px and less.*/
-    #id_about{
-        top: 80%;
-        width: 60%;
-    }
-}
 @media screen and (max-width: 600px){
     /* this is only for 600px and less.*/
     header{
-        width: 100%;
-    }
-    #id_about{
-        top: 100%;
-        left: 0;
-        width: auto;
-        margin: 10vw;
-        background-image: linear-gradient(135deg, white, 2%, transparent 55%);
+        padding: 8vw 2rem;
+        grid-template-columns: 5fr 1fr;
+        /* areas: */
+        grid-template-areas:
+            "a_header1    a_header1";
     }
 }/*@medie*/
 
@@ -123,6 +118,7 @@ main{
     background-image: linear-gradient(to bottom, var(--my-color-light-green), 20%, white );
     width: 100%;
     min-height: 100%;
+    margin-top: var(--my-island-height);
 }
 
 /*** Collapsible: ***/
@@ -144,7 +140,6 @@ main{
 
 #id_set2-title1{
     grid-area: a_set2-title1;
-    font-size: min(16.5rem, calc(( 100vw - var(--my-scrollspy-width)) * 0.05 ));
 }
 #id_set2-img1{
     grid-area: a_set2-img1;
@@ -229,13 +224,15 @@ main{
 blockquote {
     border-left: 5px solid var(--my-color-light-green);
 }
+blockquote span{
+    white-space: nowrap;
+}
 .collapsible {
     margin-top: 2.5rem;
 }
 
 #id_main{
     width: 100%;
-    padding-top: calc( 100vh - var(--my-header-height));
     padding-bottom: 8vw;
     padding-right: calc( 2rem + var(--my-scrollspy-width));
     padding-left: 2rem;
@@ -526,6 +523,68 @@ p{
 
 
 /*** Animations: ***/
+.animate{
+    animation-delay: 0.2s;
+    animation-duration: 0.4s;
+    transform-origin: 50% 50%;
+    animation-timing-function: ease;
+    animation-fill-mode: backwards;
+}
+/* Pop In: */
+.animate.pop{ 
+    animation-name: animate-pop; 
+}
+@-webkit-keyframes animate-pop{
+    0%{
+        opacity: 0;
+        transform: scale(0.95, 0.95);
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1, 1);
+    }
+}
+@keyframes animate-pop{
+    0%{
+        opacity: 0;
+        transform: scale(0.95, 0.95);
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1, 1);
+    }
+}
+.animate.glow{
+    animation-name: animate-glow;
+    animation-duration: 0.9s;
+}
+@-webkit-keyframes animate-glow{
+    0%{
+        opacity: 0;
+        -webkit-filter: brightness(3) saturate(3);
+        filter: brightness(3) saturate(3);
+        transform: scale(0.8, 0.8);
+    }
+    100%{
+        opacity: 1;
+        -webkit-filter: brightness(1) saturate(1);
+        filter: brightness(1) saturate(1);
+        transform: scale(1, 1);
+    }
+}
+@keyframes animate-glow{
+    0%{
+        opacity: 0;
+        filter: brightness(3) saturate(3);
+        transform: scale(0.8, 0.8);
+    }
+    100%{
+        opacity: 1;
+        filter: brightness(1) saturate(1);
+        transform: scale(1, 1);
+    }
+}
+
 .c_arrow{
     animation-name: rotate-90;
     animation-duration: 1.5s;
