@@ -46,7 +46,7 @@
 
     <!---SVGs in Header (SVGs are outside the 'wrapper' for the purpose of going behind it):-->
     <!--The 'vitjun-logo' in the header:-->
-    <div id="id_sticky-container">
+    <div id="id_sticky-container" class="section scrollspy">
       <div id="id_vitjun_logo" data-ratio="0.439">
         <svg width="201.0" height="84.0" viewBox="0 0 201.0 84.0">
           <g class="animate-soon glow c_svg-logo-art">
@@ -128,19 +128,22 @@
         </svg>
       </div>
     </div>
+
+
     
     <!--The 'northern-sea-line' in the header:-->
     <div id="id_wrapper">
       <main>
-
-        <!--Header:-->
-        <header id="id_vitjun" class="section scrollspy"><!--css-grid_1-->
-          <blockquote id="id_about">
-            <h3 class="c_font-syncopate">Mannauðs- og skrifstofustjóri til leigu</h3>
-            <p class="c_epilogue">Vitjun ehf. er ráðgjafafyrirtæki á norðurlandi, nánar tiltekið á Húsavík, sem býður upp á mannauðsráðgjafa og/eða skrifstofustjóra til leigu. Verkefnin sem um ræðir geta verið fjölbreytt, allt frá starfsmannasamtölum og utanumhaldi reikninga til uppsetningar og úttekta á gæðakerfum, allt eftir samkomulagi.</p>
-          </blockquote>
-        </header>
-
+        <div id="id_header-space">
+          <!--Header:-->
+          <div id="id_vitjun-header">
+            <h2 class="c_set-title c_font-syncopate">Mannauðs- og <br/> skrifstofustjóri til leigu</h2>
+            <blockquote id="id_about">
+              <h3 class="c_font-syncopate">Vitjun ehf</h3>
+              <p class="c_epilogue">Vitjun er ráðgjafafyrirtæki á norðurlandi, nánar tiltekið á Húsavík, sem býður upp á mannauðsráðgjafa og/eða skrifstofustjóra til leigu. Verkefnin sem um ræðir geta verið fjölbreytt, allt frá starfsmannasamtölum og utanumhaldi reikninga til uppsetningar og úttekta á gæðakerfum, allt eftir samkomulagi.</p>
+            </blockquote>
+          </div>
+        </div>
 
         <!--Collapsible: 'https://materializecss.com/collapsible.html'-->
         <div id="id_main" class="container"><!--css-grid_1-->
@@ -314,7 +317,7 @@
 
 
           <h2 id="id_set3-title1" class="c_set-title c_font-syncopate section scrollspy">Gæðakerfi</h2><!--css-grid_2-->
-          <div id="id_set3-img1" class="c_img-container"><img class="c_set-img" src="css/gir_v2.svg" alt="Abstrakt mynd af tveim tannhjólum."></div><!--css-grid_2-->
+          <div id="id_set3-img1" class="c_img-container"><img class="c_set-img" src="css/gir_v3.svg" alt="Abstrakt mynd af tveim tannhjólum."></div><!--css-grid_2-->
           
           <blockquote id="id_set3-section1" class="c_set-section"><!--css-grid_2-->
             <h3 class="c_font-syncopate"><span> ÍST-85:2012 / </span> <span> ISO-9001 / </span> <span> ÍST-EN-ISO-14001:2015 </span></h3>
@@ -400,10 +403,10 @@
       <div id="id_scrollspy-container" class="hide-on-small-only as-animate slide as-delay-3">
         <div id="id_scrollspy-bg">
           <ul class="section table-of-contents c_scrollspy">
-            <li><a class="waves-effect as-animate slide" href="#id_vitjun">
+            <li><a class="waves-effect as-animate slide" href="#id_sticky-container">
               Vitjun
             </a></li>
-            <li class="c_divider as-animate slide as-delay-5"><div class="divider"></div></li>
+            <li class="c_divider as-animate slide as-delay-0"><div class="divider"></div></li>
 
             <li><a class="waves-effect as-animate slide as-delay-1" href="#id_set1-title1">
               Mannauður
@@ -445,7 +448,7 @@
       <ul id="slide-out" class="c_font-syncopate sidenav">
         <li>
           <div class="user-view">
-            <a class="waves-effect sidenav-close" href="#id_vitjun">
+            <a class="waves-effect sidenav-close" href="#id_sticky-container">
               <img src="css/vitjun_logo_3.svg" alt="vitjun ehf">
             </a>
           </div>

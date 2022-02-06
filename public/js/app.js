@@ -10,8 +10,6 @@ document.addEventListener("DOMContentLoaded", () => {
     f_collapsible();
 });
 
-
-
 function f_scrollspy(){
     const options = {
         throttle: 200,
@@ -37,3 +35,12 @@ function f_collapsible(){
     var elems = document.querySelectorAll('.collapsible');
     var instances = M.Collapsible.init(elems, options);
 };
+
+
+
+function f_get_window_ratio(){
+    let window_ratio = window.innerWidth / window.innerHeight;
+    document.querySelector(':root').style.setProperty("--my-window-ratio", window_ratio);
+}
+f_get_window_ratio();
+window.addEventListener('resize', f_get_window_ratio);
