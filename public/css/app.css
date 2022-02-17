@@ -4,11 +4,11 @@
     font-family: syncopate;
     src: url(syncopate_regular.ttf);
 }
-@font-face{
+/*@font-face{
     font-family: syncopate;
     src: url(syncopate_bold.ttf);
     font-weight: bold;
-}
+}*/
 
 /**** Variables: ****/
 :root{
@@ -31,7 +31,7 @@
     --my-logo-height: calc( var(--my-logo-width) * 0.439); /*<- height/width ratio, see in HTML.*/
 
     --my-island-pos-y: 7.5vw;
-    --my-island-height: calc( 100vw * 0.5); /*<- height/width ratio, see in HTML.*/
+    --my-island-height: calc( 100vw * 0.49); /*<- height/width ratio, see in HTML.*/
 
     --my-scrollspy-width: 20.0rem;
 }
@@ -80,10 +80,11 @@
 }
 
 #id_vitjun-header{
+    --y-scale: 2.2;
     --y: calc( var(--my-island-height) + var(--my-island-pos-y));
     position: absolute;
     right: var(--my-scrollspy-width);
-    top: max( calc( var(--y) / 2.5 ), calc( var(--y) / var(--my-window-ratio) / 1.15 ));
+    top: max( calc( var(--y) / var(--y-scale)), calc( var(--y) / var(--my-window-ratio) / 1.15 ));
     width: min-content;
     text-align: center;
     margin-right: 2vw;
@@ -91,7 +92,7 @@
 }
 #id_vitjun-header h2{
     text-align: right;
-    font-size: calc(( 60vw - var(--my-scrollspy-width)) * 0.055);
+    font-size: calc(( 58vw - var(--my-scrollspy-width)) * 0.055);
     white-space: nowrap;
     padding-top: 0rem;
 }
@@ -106,12 +107,18 @@
 /* materializecss: s=0px-600px, m=601px-992px, l=993px-1200px and xl=1201 & above. */
 @media screen and (max-width: 1165px){
     /* this is only for 1165px and less.*/
+    #id_vitjun-header{
+        --y-scale: 1.8;
+    }
     #id_vitjun-header h2{
         font-size: calc(( 72.5vw - var(--my-scrollspy-width)) * 0.055);
     }
 }/*@medie*/
 @media screen and (max-width: 870px){
     /* this is only for 870px and less.*/
+    #id_vitjun-header{
+        --y-scale: 1.45;
+    }
     #id_vitjun-header h2{
         font-size: calc(( 92.5vw - var(--my-scrollspy-width)) * 0.055);
     }
@@ -123,7 +130,6 @@
         width: 100%;
         margin: 0rem;
         padding: 0rem 2rem 8vw 2rem;
-        text-align: left
     }
     #id_vitjun-header h2{
         font-size: calc(90vw * 0.0525 );
@@ -201,22 +207,16 @@ main{
     font-size: min(16.5rem, calc(( 100vw - var(--my-scrollspy-width)) * 0.08));
     padding-top: 5rem;
 }
-.c_img-container{
-    /*
-    Má taka í burtu!
-    position: relative;*/
-    width: 100%;
-    height: 100%;
-}
 .c_set-img{
-    /*position: sticky;
-    top: 0%;*/
     width: 100%;
     padding: 5rem 1vw 2rem 1vw;
 }
 .c_set-section{
     border-top: 5px solid;
     border-image: linear-gradient(135deg, var(--my-color-light-green), 25%, transparent) 1;
+}
+.c_set-section-line{
+    border-image: linear-gradient(transparent, var(--my-color-light-green), transparent) 50;
 }
 
 #id_main h3{
@@ -308,9 +308,6 @@ blockquote span{
 
             "a_set4-title1    a_set4-img1"
             "a_set4-section1  a_set4-section1";
-    }
-    #id_set2-title1{
-        font-size: min(16.5rem, calc(( 100vw - var(--my-scrollspy-width)) * 0.08 ));
     }
     .c_set-title{
         font-size: calc( 80vw * 0.08);
@@ -449,6 +446,16 @@ blockquote span{
     box-shadow: 0 5px 5px 0 rgb(0 0 0 / 16%), 0 5px 10px 0 rgb(0 0 0 / 12%);
     /* box-shadow on only one sid: */
     clip-path: inset(0px 0px 0px -15px);
+}
+.c_arrow-point{
+    display: inline-block;
+    font-size: 1rem;
+    color: blueviolet;
+    background: rgb(23, 23, 23);
+    width: 1.0rem;
+    height: 1.0rem;
+    /*margin: 0.4rem 1rem 0rem 0.5rem;*/
+    clip-path: polygon(42% 8%, 50% 0, 92% 42%, 100% 50%, 50% 100%, 42% 92%, 85% 50%, 42% 8%);
 }
 /* overriding materialize.css: */
 #id_scrollspy-container ul li{
