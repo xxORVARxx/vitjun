@@ -203,6 +203,23 @@ main{
     grid-area: a_set4-section1;
 }
 
+#id_set5-title1{
+    grid-area: a_set5-title1;
+}
+#id_set5-title2{
+    grid-area: a_set5-title2;
+}
+#id_set5-img1{
+    grid-area: a_set5-img1;
+}
+#id_set5-section1{
+    grid-area: a_set5-section1;
+}
+#id_set5-section2{
+    padding-left: 0;
+    grid-area: a_set5-img2;
+}
+
 .c_set-title{
     font-size: min(16.5rem, calc(( 100vw - var(--my-scrollspy-width)) * 0.08));
     padding-top: 5rem;
@@ -211,6 +228,26 @@ main{
     width: 100%;
     padding: 5rem 1vw 2rem 1vw;
 }
+
+.c_radgjafi-container{
+    display: grid;
+    grid-template-columns: 4fr 1fr 4fr;
+    background: radial-gradient(ellipse at 30% 40%, white 50%, transparent 70%);
+}
+.c_radgjafi-container img{
+    width: min( 80%, 25rem );
+    margin-bottom: 3.5rem;
+}
+.c_radgjafi-container ul li{
+    color: var(--my-color-green);
+    list-style: square;
+    font-size: 1.2rem;
+}
+.c_radgjafi-container ul li p{
+    color: black;
+    padding-right: 2.25rem;
+}
+
 .c_set-section{
     border-top: 5px solid;
     border-image: linear-gradient(135deg, var(--my-color-light-green), 25%, transparent) 1;
@@ -281,10 +318,25 @@ blockquote span{
         "a_set3-img1   .                a_set3-section2    a_set3-section2"
         
         "a_set4-img1   a_set4-title1    a_set4-title1      a_set4-title1  "
-        "a_set4-img1   a_set4-section1  a_set4-section1    .              ";
+        "a_set4-img1   a_set4-section1  a_set4-section1    .              "
+                
+        "a_set5-img1   a_set5-title1    a_set5-title1      a_set5-title1  "
+        "a_set5-img1   a_set5-title2    a_set5-title2      a_set5-title2  "
+        "a_set5-img1   a_set5-img2      a_set5-img2        .              "
+        "a_set5-img1   .                a_set5-section1    a_set5-section1"
+        ;
 }
 /**** Responsive main: ****/
 /* materializecss: s=0px-600px, m=601px-992px, l=993px-1200px and xl=1201 & above. */
+@media screen and (max-width: 992px){
+    /* this is only for 992px and less.*/
+    .c_radgjafi-container{
+        grid-template-columns: 4fr 2rem 4fr;
+    }
+    .c_radgjafi-container ul li p{
+        padding-right: 0.25rem;
+    }
+}/*@medie*/
 @media screen and (max-width: 600px){
     /* this is only for 600px and less.*/
     #id_main{
@@ -307,7 +359,11 @@ blockquote span{
             "a_set3-section2  a_set3-section2"
 
             "a_set4-title1    a_set4-img1"
-            "a_set4-section1  a_set4-section1";
+            "a_set4-section1  a_set4-section1"
+
+            "a_set5-title1    a_set5-img1"
+            "a_set5-section1  a_set5-section1"
+            "a_set5-img2      a_set5-img2";
     }
     .c_set-title{
         font-size: calc( 80vw * 0.08);
@@ -315,6 +371,9 @@ blockquote span{
     }
     .c_set-img{
         padding: 5rem 0 0 0;
+    }
+    #id_set5-section1 p b{
+        font-size: 1.6rem;
     }
 }/*@medie*/
 
@@ -549,6 +608,13 @@ p{
     -webkit-backdrop-filter: blur(0.75rem);
     backdrop-filter: blur(0.75rem);
     background-color: rgba(255, 255, 255, 0.5);
+}
+.c_inline{
+    display: inline;
+}
+a{
+    font-weight: bolder;
+    color: var(--my-color-dark-green);
 }
 
 
