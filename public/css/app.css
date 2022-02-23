@@ -235,7 +235,7 @@ main{
     background: radial-gradient(ellipse at 30% 40%, white 50%, transparent 70%);
 }
 .c_radgjafi-container img{
-    width: min( 80%, 25rem );
+    width: min( 80%, 18rem );
     margin-bottom: 3.5rem;
 }
 .c_radgjafi-container ul li{

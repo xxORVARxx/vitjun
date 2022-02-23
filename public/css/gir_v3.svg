@@ -174,7 +174,7 @@
          style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:6;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none" />
       <animateTransform
          repeatCount="indefinite"
-         dur="5s"
+         dur="3s"
          begin="0s"
          to="-60 72.180168 991.90491"
          from="0 72.180168 991.90491"
@@ -205,7 +205,7 @@
          style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:6.30258036;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
          <animateTransform
            repeatCount="indefinite"
-           dur="5s"
+           dur="3s"
            begin="0s"
            to="72 27.462296 1013.4525"
            from="0 27.462296 1013.4525"
