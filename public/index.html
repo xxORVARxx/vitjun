@@ -20,8 +20,6 @@
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection"/>
     <!--My CSS file: (below the 'materialize.css' so I can override it)-->
     <link rel="stylesheet" href="css/app.css">
-    <!--My CSS file for animated entrances: -->
-    <link rel="stylesheet" href="css/system_for_animated_entrances.css">
 
     <!-- FIREBASE: -->
     <!-- Update the version number as needed -->
@@ -40,9 +38,20 @@
       initialize the SDK after all desired features are loaded, set useEmulator to false
       to avoid connecting the SDK to running emulators.
     -->
-    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+    <script defer src="/__/firebase/init.js?useEmulator=false"></script>
     <!-- https://vitjun-a01b8.web.app -->
   </head>
+
+  <!-- Þetta er fyrir Google Ads: ("Website traffic-search-1" 2020-02-25) -->
+  <!-- Global site tag (gtag.js) - Google Ads: 10859178841 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-10859178841"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-10859178841');
+  </script>
+
   <body>
 
     <!---SVGs in Header (SVGs are outside the 'wrapper' for the purpose of going behind it):-->
@@ -50,7 +59,7 @@
     <div id="id_sticky-container" class="section scrollspy">
       <div id="id_vitjun_logo" data-ratio="0.439">
         <svg width="201.0" height="84.0" viewBox="0 0 201.0 84.0">
-          <g class="animate-soon glow c_svg-logo-art">
+          <g class="c_animate-soon glow c_svg-logo-art">
               <path
                   d="m 162.11285,78.005682 -24.17458,-7.833174 -2e-5,-25.348733 24.17458,-7.833205 14.94072,20.507546 z"
                   id="svg1_fimmhyrningur"
@@ -88,7 +97,7 @@
                   d="M 96.663481,46.408097 115.92502,35.318017"
                   style="opacity:1;fill:none;fill-rule:evenodd;stroke-width:1.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.65098039" />
           </g>
-          <g class="animate-soon pop c_svg-logo-vitjun">
+          <g class="c_animate-soon pop c_svg-logo-vitjun">
               <path
                   d="m 20.71623,33.594627 h -4.4375 L 0,0.98972689 H 3.32219 L 18.58053,31.553827 33.83887,0.98972689 h 3.29846 z"
                   id="svg1_vitjun1"
@@ -360,26 +369,26 @@
 
           <h2 id="id_set5-title1" class="c_set-title c_font-syncopate section scrollspy">Ráðgjafinn</h2><!--css-grid_2-->
           <div id="id_set5-img1"><img class="c_set-img" src="css/radgjafinn.svg" alt="Abstrakt mynd af manneskju."></div><!--css-grid_2-->
-          <h4 id="id_set5-title2" class="hide-on-small-only c_font-syncopate">Brynja Rún Benediktsdóttir</h4><!--css-grid_2-->
-          <div id="id_set5-img1"></div><!--css-grid_2-->
           <blockquote id="id_set5-section1" class="c_set-section"><!--css-grid_2-->
-            <p class="c_epilogue"><b>Brynja Rún Benediktsdóttir</b> er ráðgjafi og eigandi Vitjunar ehf.<br/>Hennar reynsla á vinnumarkaði felst meðal annars í mannauðsmálum, skrifstofustörfum, verkefnastjórnun, launavinnslu og innleiðingu hinna ýmissa gæða- og tímastjórnunarkerfa. Áhersla er lögð á vandvirkni og persónulega þjónustu, á þeim tíma sem viðskiptavini hentar.</p>
-            <p class="c_epilogue c_inline">Sími: <a href="tel:+3548587512">858-7512</a></p>
-            <p class="c_epilogue c_inline">Netfang:  <a href="mailto:brynjarun@vitjun.is">brynjarun@vitjun.is</a></p>
-          </blockquote>
-
-          <blockquote id="id_set5-section2" class="c_set-section"><!--css-grid_2-->
             <div class="c_radgjafi-container">
               <img src="css/Brynja_Run.jpg" alt="Mynd af ráðgjafa, Brynja Rún Benediktsdóttir.">
-              <div><!--GRIDHOLDER--></div>
-              <ul>
+              <p class="c_epilogue"><br/><b>Brynja Rún Benediktsdóttir</b> er ráðgjafi og eigandi Vitjunar ehf.<br/>Hennar reynsla á vinnumarkaði felst meðal annars í mannauðsmálum, skrifstofustörfum, verkefnastjórnun, launavinnslu og innleiðingu hinna ýmissa gæða- og tímastjórnunarkerfa. Áhersla er lögð á vandvirkni og persónulega þjónustu, á þeim tíma sem viðskiptavini hentar.</p>
+              <p>
+                <span class="c_epilogue">Sími: <a href="tel:+3548587512">858-7512</a></span>
+                <span class="c_epilogue">Netfang:  <a href="mailto:brynjarun@vitjun.is">brynjarun@vitjun.is</a></span>
+              </p>
+
+              <section id="id_menntun1" class="c_set-section">
                 <p><b>Menntun:</b></p>
-                <li><p>Bachelor of Arts í sálfræði frá Háskóla Akureyrar.</p></li>
-                <li><p>Master of Science í mannauðsstjórnun frá the University of Edinburgh Business School.</p></li>
-                <li><p>Kennsluréttindi frá Háskóla Akureyrar.</p></li>
-              </ul>
-            </div>
+                <ul>
+                  <li><p>Bachelor of Arts í sálfræði frá Háskóla Akureyrar.</p></li>
+                  <li><p>Master of Science í mannauðsstjórnun frá the University of Edinburgh Business School.</p></li>
+                  <li><p>Kennsluréttindi frá Háskóla Akureyrar.</p></li>
+                </ul>
+              </section>
           </blockquote>
+
+          
 
         </div><!--id_main-->
       </main>
@@ -425,52 +434,53 @@
 
 
       <!--Navbar / Scrollspy: from 'https://materializecss.com/scrollspy.html'-->
-      <div id="id_scrollspy-container" class="hide-on-small-only as-animate slide as-delay-3">
+      <div id="id_scrollspy-container" class="hide-on-small-only c_animate-soon slide as-delay-1">
         <div id="id_scrollspy-bg">
           <ul class="section table-of-contents c_scrollspy">
-            <li><a class="waves-effect as-animate slide" href="#id_sticky-container">
+            <li><a class="waves-effect c_animate-soon slide as-delay-1" href="#id_sticky-container">
               Vitjun
             </a></li>
-            <li class="c_divider as-animate slide as-delay-0"><div class="divider"></div></li>
+            <li class="c_divider c_animate-soon slide as-delay-2"><div class="divider"></div></li>
 
-            <li><a class="waves-effect as-animate slide as-delay-1" href="#id_set1-title1">
+            <li><a class="waves-effect c_animate-soon slide as-delay-2" href="#id_set1-title1">
               Mannauður
             </a></li>
-            <li><a class="waves-effect as-animate slide as-delay-2" href="#id_set1-section1">
+            <li><a class="waves-effect c_animate-soon slide as-delay-3" href="#id_set1-section1">
               <i class="material-icons tiny">keyboard_arrow_right</i>
               Almenn ráðgjöf
             </a></li>
-            <li><a class="waves-effect as-animate slide as-delay-3" href="#id_set1-section2">
+            <li><a class="waves-effect c_animate-soon slide as-delay-4" href="#id_set1-section2">
               <i class="material-icons tiny">keyboard_arrow_right</i>
               Laun og fríðindi
             </a></li>
-            <li><a class="waves-effect as-animate slide as-delay-4" href="#id_set1-section3">
+            <li><a class="waves-effect c_animate-soon slide as-delay-5" href="#id_set1-section3">
               <i class="material-icons tiny">keyboard_arrow_right</i>
               líðan og áreiti
             </a></li>
 
-            <li><a class="waves-effect as-animate slide as-delay-5" href="#id_set2-title1">
+            <li><a class="waves-effect c_animate-soon slide as-delay-6" href="#id_set2-title1">
               Skrifstofa
             </a></li>
-            <li><a class="waves-effect as-animate slide as-delay-6" href="#id_set3-title1">
+            <li><a class="waves-effect c_animate-soon slide as-delay-7" href="#id_set3-title1">
               gæðakerfi
             </a></li>
-            <li><a class="waves-effect as-animate slide as-delay-7" href="#id_set4-title1">
+            <li><a class="waves-effect c_animate-soon slide as-delay-8" href="#id_set4-title1">
               Fyrirlestrar
             </a></li>
 
-            <li class="c_divider as-animate slide as-delay-8"><div class="divider"></div></li>
-            <li><a class="waves-effect as-animate slide as-delay-8" href="#id_set5-title1">
+            <li class="c_divider c_animate-soon slide as-delay-9"><div class="divider"></div></li>
+            <li><a class="waves-effect c_animate-soon slide as-delay-9" href="#id_set5-title1">
               Ráðgjafinn
             </a></li>
-            <li><a class="waves-effect as-animate slide as-delay-9" href="#id_footer">
+            <li><a class="waves-effect c_animate-soon slide as-delay-10" href="#id_footer">
               Hafðu Samband
             </a></li>
           </ul>
         </div>
       </div>
+      
       <!--Navbar / Sidenav: from 'https://materializecss.com/sidenav.html' (phones)-->
-      <div id="id_sidenav-trigger" class="hide-on-med-and-up as-animate slide as-delay-1">
+      <div id="id_sidenav-trigger" class="hide-on-med-and-up c_animate-soon slide as-delay-1">
         <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
       </div>
       <ul id="slide-out" class="c_font-syncopate sidenav">

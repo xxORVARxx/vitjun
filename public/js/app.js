@@ -2,8 +2,8 @@
 
 // https://materializecss.com/scrollspy.html:
 document.addEventListener("DOMContentLoaded", () => {
-    document.querySelectorAll(".animate-soon").forEach( animate => {
-        animate.classList.replace("animate-soon", "animate");
+    document.querySelectorAll(".c_animate-soon").forEach( animate => {
+        animate.classList.replace("c_animate-soon", "c_animate");
     });
     f_scrollspy();
     f_sidenav();

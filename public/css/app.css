@@ -88,7 +88,7 @@
     width: min-content;
     text-align: center;
     margin-right: 2vw;
-    text-shadow: 0rem 0rem 1.0rem #fffee5;
+    text-shadow: 0rem 0rem 0.8rem #fffee5;
 }
 #id_vitjun-header h2{
     text-align: right;
@@ -97,7 +97,7 @@
     padding-top: 0rem;
 }
 #id_vitjun-header blockquote{
-    background-image: radial-gradient(ellipse at top, rgba(255, 255, 255, 0.33), transparent 75%);
+    background-image: radial-gradient(ellipse at top, rgba(255, 255, 255, 0.5), transparent 95%);
     border-top: 5px solid;
     border-image: linear-gradient(135deg, var(--my-color-green), 25%, transparent) 1;
     padding-bottom: calc( 1rem * var(--my-window-ratio));
@@ -206,18 +206,15 @@ main{
 #id_set5-title1{
     grid-area: a_set5-title1;
 }
-#id_set5-title2{
-    grid-area: a_set5-title2;
-}
 #id_set5-img1{
     grid-area: a_set5-img1;
 }
 #id_set5-section1{
+    padding-left: 0;
     grid-area: a_set5-section1;
 }
 #id_set5-section2{
-    padding-left: 0;
-    grid-area: a_set5-img2;
+    grid-area: a_set5-section2;
 }
 
 .c_set-title{
@@ -230,22 +227,38 @@ main{
 }
 
 .c_radgjafi-container{
-    display: grid;
-    grid-template-columns: 4fr 1fr 4fr;
     background: radial-gradient(ellipse at 30% 40%, white 50%, transparent 70%);
+    padding-bottom: 3.5rem;
 }
 .c_radgjafi-container img{
-    width: min( 80%, 18rem );
-    margin-bottom: 3.5rem;
+    float: left;
+    width: min( 50%, 18rem );
+    margin: 0 4vw 1.5rem 0;
 }
-.c_radgjafi-container ul li{
+.c_radgjafi-container p{
+    margin-top: 0;
+}
+#id_set5-section1 p b{
+    font-size: 1.6rem;
+}
+#id_menntun1{
+    float: right;
+    max-width: max( 49%, calc( 100% - 18rem - 4vw ));
+    margin-top: 0.5rem;
+    padding-top: 1rem;
+}
+#id_menntun1 ul{
+    padding-left: 2.25rem;
+}
+#id_menntun1 ul li{
     color: var(--my-color-green);
     list-style: square;
     font-size: 1.2rem;
 }
-.c_radgjafi-container ul li p{
+#id_menntun1 ul li p{
     color: black;
     padding-right: 2.25rem;
+    margin-bottom: 0.75rem;
 }
 
 .c_set-section{
@@ -321,20 +334,31 @@ blockquote span{
         "a_set4-img1   a_set4-section1  a_set4-section1    .              "
                 
         "a_set5-img1   a_set5-title1    a_set5-title1      a_set5-title1  "
-        "a_set5-img1   a_set5-title2    a_set5-title2      a_set5-title2  "
-        "a_set5-img1   a_set5-img2      a_set5-img2        .              "
-        "a_set5-img1   .                a_set5-section1    a_set5-section1"
+        "a_set5-img1   a_set5-section1  a_set5-section1    .              "
         ;
 }
 /**** Responsive main: ****/
 /* materializecss: s=0px-600px, m=601px-992px, l=993px-1200px and xl=1201 & above. */
-@media screen and (max-width: 992px){
-    /* this is only for 992px and less.*/
-    .c_radgjafi-container{
-        grid-template-columns: 4fr 2rem 4fr;
+@media screen and (max-width: 1200px){
+    /* this is only for 1200px and less.*/
+    #id_menntun1{
+        max-width: none;
+        width: 100%;
+        padding-left: 2.25rem;
+        border: hidden;
     }
-    .c_radgjafi-container ul li p{
-        padding-right: 0.25rem;
+}/*@medie*/
+@media screen and (max-width: 775px){
+    /* this is only for 775px and less.*/
+    .c_radgjafi-container img{
+        margin-right: 0.5rem;
+    }
+}/*@medie*/
+@media screen and (max-width: 680px){
+    /* this is only for 680px and less.*/
+    .c_radgjafi-container img{
+        width: 65%;
+        margin-right: 30%;
     }
 }/*@medie*/
 @media screen and (max-width: 600px){
@@ -372,8 +396,16 @@ blockquote span{
     .c_set-img{
         padding: 5rem 0 0 0;
     }
-    #id_set5-section1 p b{
-        font-size: 1.6rem;
+    .c_radgjafi-container img{
+        width: 50%;
+        margin-right: 7.5%;
+    }
+}/*@medie*/
+@media screen and (max-width: 380px){
+    /* this is only for 380px and less.*/
+    .c_radgjafi-container img{
+        width: 65%;
+        margin-right: 30%;
     }
 }/*@medie*/
 
@@ -596,6 +628,11 @@ h4{
 p{
     font-size: 1.25rem;
 }
+main a{
+    font-size: 1.35rem;
+    font-weight: bolder;
+    color: var(--my-color-dark-green);
+}
 
 
 
@@ -609,21 +646,14 @@ p{
     backdrop-filter: blur(0.75rem);
     background-color: rgba(255, 255, 255, 0.5);
 }
-.c_inline{
-    display: inline;
-}
-a{
-    font-weight: bolder;
-    color: var(--my-color-dark-green);
-}
 
 
 
 /*** Animations: ***/
-.animate-soon{
+.c_animate-soon{
     opacity: 0;
 }
-.animate{
+.c_animate{
     animation-delay: 0.2s;
     animation-duration: 0.4s;
     transform-origin: 50% 50%;
@@ -631,7 +661,7 @@ a{
     animation-fill-mode: backwards;
 }
 /* Pop In: */
-.animate.pop{ 
+.c_animate.pop{ 
     animation-name: animate-pop; 
 }
 @-webkit-keyframes animate-pop{
@@ -654,7 +684,8 @@ a{
         transform: scale(1, 1);
     }
 }
-.animate.glow{
+/* Glow In: */
+.c_animate.glow{
     animation-name: animate-glow;
     animation-duration: 0.9s;
 }
@@ -684,6 +715,20 @@ a{
         transform: scale(1, 1);
     }
 }
+/* Slide In: */
+.c_animate.slide{ 
+    animation-name: animate-slide; 
+}
+@keyframes animate-slide{
+    0%{
+        opacity: 0;
+        transform: translate(5rem, 0);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+}
 
 .c_arrow{
     animation-name: rotate-90;
@@ -709,4 +754,61 @@ li.active .c_arrow{
     60%{ clip-path: polygon(42% 8%, 50% 0, 92% 42%, 100% 50%, 50% 100%, 42% 92%, 0 50%, 42% 8%); 
         background: var(--my-color-green); }
     100%{ clip-path: polygon(42% 8%, 50% 0, 92% 42%, 100% 50%, 50% 100%, 42% 92%, 85% 50%, 42% 8%); }
+}
+
+
+
+/* Animation Delays: */
+.as-delay-0{
+    animation-delay: 0s;
+}
+.as-delay-1{
+    animation-delay: 0.6s;
+}
+.as-delay-2{
+    animation-delay: 0.7s;
+}
+.as-delay-3{
+    animation-delay: 0.8s;
+}
+.as-delay-4{
+    animation-delay: 0.9s;
+}
+.as-delay-5{
+    animation-delay: 1s;
+}
+.as-delay-6{
+    animation-delay: 1.1s;
+}
+.as-delay-7{
+    animation-delay: 1.2s;
+}
+.as-delay-8{
+    animation-delay: 1.3s;
+}
+.as-delay-9{
+    animation-delay: 1.4s;
+}
+.as-delay-10{
+    animation-delay: 1.5s;
+}
+.as-delay-11{
+    animation-delay: 1.6s;
+}
+.as-delay-12{
+    animation-delay: 1.7s;
+}
+.as-delay-13{
+    animation-delay: 1.8s;
+}
+.as-delay-14{
+    animation-delay: 1.9s;
+}
+.as-delay-15{
+    animation-delay: 2s;
+}
+
+/*Remove animations for users who have enabled their reduced motion preference setting:*/
+@media screen and (prefers-reduced-motion: reduce){
+    .animate{ animation: none !important; }
 }
